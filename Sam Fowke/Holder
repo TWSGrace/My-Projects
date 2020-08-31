@@ -1,0 +1,8 @@
+<div class="dropdown">
+                    <div class="nav-link-wrapper" id="portfolio-dropdown">Portfolio</div>
+                    <div class="dropdown-content">
+                        <a href="#">Portfolio 1</a>
+                        <a href="#">Portfolio 2</a>
+                        <a href="#">Portfolio 3</a>
+                    </div>
+                </div>

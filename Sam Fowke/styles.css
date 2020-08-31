@@ -1,0 +1,348 @@
+body, html {
+    font-family: "Montserrat", sans-serif;
+    margin: 0px;
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+}
+
+.brand {
+    font-size: 3vh;
+}
+
+.nav-wrapper {
+    display: flex;
+    padding: 100px;
+    justify-content: space-between;
+}
+
+.left-side {
+    display: flex;
+}
+
+.right-side {
+    display: flex;
+}
+
+.nav-wrapper > .right-side > div {
+    margin-left: 20px;
+}
+
+.nav-link-wrapper {
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 3vh;
+}
+
+.nav-link-wrapper a {
+    color: black;
+    transition: color 0.5s;
+    text-decoration: none;
+}
+
+.nav-link-wrapper a:hover {
+    color: lightblue;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid black;
+    color: lightblue;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    /*display: none;*/
+    position: absolute;
+    padding-top: 20px;
+    width: 100%;
+    flex-direction: column;
+    text-align: right;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.dropdown-content a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    text-decoration: none;
+    font-size: 2vh;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    /*display: flex;*/
+    opacity: 1;
+}
+
+#portfolio-dropdown {
+    cursor: pointer;
+}
+
+.background-wrapper {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+
+.main-title {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+
+.main-title-text {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.main-title-title {
+    position: absolute;
+    font-size: 8vh;
+    top: 20vh;
+}
+
+.main-title-subtitle {
+    position: absolute;
+    top: 30vh;
+    font-size: 4vh;
+}
+
+.main-title-background {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    animation: 18s cycle infinite;
+}
+
+#background1 {
+    animation-delay: 0s;
+    z-index: -2;
+}
+
+#background2 {
+    animation-delay: 6s;
+    z-index: -3;
+}
+
+#background3 {
+    animation-delay: 12s;
+    z-index: -4;
+}
+
+@keyframes cycle {
+    0% {
+        opacity: 1;
+    }
+    27.8% {
+        opacity: 1;
+    }
+    33.3% {
+        opacity: 0;
+    }
+    94.4% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 
+1) 0%
+2) a/t*100%
+3) (a+b)/t*100% = 1/n*100%
+4) 100%-(b/t*100%)
+5) 100%
+
+a= 5
+b= 1
+n= 3
+t= (a+b)*n
+t= 18 
+*/
+
+.content-wrapper {
+    position: relative;
+    top: calc(100vh - 239px);
+    height: auto;
+    padding-bottom: 150px;
+}
+
+.content {
+    padding-top: 10vh;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    display: grid;
+    grid-template-columns: 400px 400px;
+    column-gap: 8vw;
+    grid-template-rows: 600px 600px;
+    row-gap: 10vh;
+    justify-content: center;
+    align-content: center;
+}
+
+.sample-image {
+    align-self: center;
+    position: relative;
+}
+
+.label {
+    position: relative;
+    bottom: 20px;
+}
+
+.portfolio-link {
+    position: absolute;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: -50px;
+    width: 100%;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+.footer-wrapper {
+    display: flex;
+    background-color: #FAF0DC;
+    padding: 10px 40px;
+    justify-content: space-between;
+}
+
+.left-footer {
+    display: flex;
+}
+
+.right-footer {
+    display: flex;
+}
+
+.social {
+    margin-left: 30px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.social a {
+    text-decoration: none;
+    color: black;
+}
+
+.social:hover {
+    border-bottom: 1px solid black;
+}
+
+.bio-content {
+    height: 400vh;
+}
+
+.bio-title {
+    text-align: center;
+    margin: 50px auto;
+    font-size: 4vh;
+}
+
+.bio-image {
+    margin: 100px auto 50px auto;
+    width: 450px;
+    height: 450px;
+    object-fit: fill;
+    background-size: contain;
+    justify-self: center;
+}
+
+.bio-content-wrapper {
+    width: 700px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bio-headers {
+    font-size: 30px;
+    padding: 50px 0px;
+}
+
+.bio-paragraph {
+    text-align: center;
+}
+
+.exhibition-box {
+    display: flex;
+}
+
+.ex-paragraph {
+    padding: 30px;
+}
+
+.contact-details {
+    padding: 30px 0px;
+}
+
+input {
+    width: calc(100% - 20px);
+    border: 1px solid transparent;
+    border-bottom: 1px solid black;
+    border-radius: 25px;
+    background-color: transparent;
+    transition: background-color 0.5s;
+}
+
+input:hover {
+    background-color: #F0F0F0;
+}
+
+.form-elements {
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+}
+
+.name-email {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 80px 0px 0px;
+    align-self: flex-start !important;
+}
+
+#contact-me {
+    padding: 20px 0px !important;
+}
+
+#form-message {
+    align-self: flex-end;
+}
+
+#message {
+    height: 80px;
+}
